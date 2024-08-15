@@ -63,9 +63,7 @@ int main(int argc, char *argv[]) {
 void gotoxy(COORD c) {
     static HANDLE h = NULL;  
     if(!h)
-        h = GetStdHandle(STD_OUTPUT_HANDLE);
-    //original: (void) gotoxy(short x, short y);
-    //COORD c = { x, y };  
+        h = GetStdHandle(STD_OUTPUT_HANDLE);  
     SetConsoleCursorPosition(h,c);
 }
 COORD getxy(HANDLE hConsoleOutput) {
