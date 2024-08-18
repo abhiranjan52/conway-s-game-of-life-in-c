@@ -87,7 +87,7 @@ void print_board(CELL (*cells)[COLUMNS]) {
     for (int i = 0; i < ROWS; ++i) {
         printf("%d%s", i+1, i+1 < 10 ? "  " : " ");
         for (int j = 0; j < COLUMNS; ++j)
-            printf("[%c]", cells[i][j].state ? '#' : ' ');
+            printf("[%c]", cells[i][j].state ? 0xfe : ' ');
         putchar('\n');
     }
 }
